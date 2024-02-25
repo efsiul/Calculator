@@ -1,0 +1,10 @@
+:root {
+    --primary-color     : #A9EAf9;              /* Color principal */
+    --secondary-color   : #ff9800;              /* Color secundario */
+    --background-color  : #f3f3f3;              /* Color de fondo */
+    --button-color      : #f9f9f9;              /* Color de los botones */
+    --border-color      : #ccc;                 /* Color del borde */
+    --shadow-color      : rgba(0, 0, 0, 0.2);   /* Sombra */
+    --inset-shadow-color: rgba(0, 0, 0, 0.2);   /* Sombra interna */
+    --operator-color    : #0805;                /* Color de los operadores */
+  }

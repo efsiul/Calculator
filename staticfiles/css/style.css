@@ -1,37 +1,87 @@
+/* Estilos CSS para la calculadora */
+
+@import url('colors.css');                                          /* Importa el archivo de colores */
+
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-}
-.calculator {
-    width           : 400px;
-    margin          : 0 auto;
-    border          : 1px solid #ccc;
-    padding         : 10px;
-    border-radius   : 5px;
-}
-.screen {
-    width           : calc(100% - 22px); /* Se cambió para compensar el padding */
-    height          : 50px;
-    margin-bottom   : 10px;
-    padding         : 5px;
-    border          : 1px solid #ccc;
-    border-radius   : 3px;
-    overflow        : hidden; /* Para que el texto no se desborde */
-    text-align      : right;
+    font-family     : Arial, sans-serif;
 }
 
+/* Estilos del contenedor de la calculadora */
+.calculator {
+    width           : 100%;                                         /* Ancho del 100% */    
+    max-width       : 320px;                                        /* Ancho máximo de la calculadora */
+    margin          : 0 auto;                                       /* Centra la calculadora horizontalmente */
+    border          : 1px solid var(--border-color);                /* Borde con color variable */
+    padding         : 10px;                                         /* Espaciado interno */
+    border-radius   : 10px;                                         /* Borde redondeado */
+    box-shadow      : 4px 4px 10px var(--shadow-color);             /* Sombra */
+}
+
+/* Estilos de la pantalla de la calculadora */
+.screen {
+    width           : calc(100% - 22px);                            /* Ajusta el ancho para compensar el padding */
+    height          : 50px;                                         /* Altura de la pantalla */
+    margin-bottom   : 10px;                                         /* Margen inferior */
+    padding         : 5px;                                          /* Espaciado interno */
+    border          : 1px solid var(--border-color);                /* Borde con color variable */
+    border-radius   : 3px;                                          /* Borde redondeado */
+    overflow        : hidden;                                       /* Oculta el desbordamiento de texto */
+    text-align      : right;                                        /* Alineación del texto a la derecha */
+    background-color: var(--background-color);                      /* Color de fondo */
+    box-shadow      : inset 0px 0px 5px var(--inset-shadow-color);  /* Relieve */
+}
+
+/* Estilos de los botones */
 button {
-    width           : 50px;
-    height          : 50px;
-    margin          : 5px;
-    font-size       : 18px;
-    border          : none;
-    cursor          : pointer;
-    border-radius   : 10px;
+    width           : 50px;                             /* Ancho de los botones */
+    height          : 50px;                             /* Altura de los botones */
+    margin          : 5px;                              /* Margen entre botones */
+    font-size       : 18px;                             /* Tamaño de fuente */   
+    border          : none;                             /* Sin borde */   
+    cursor          : pointer;                          /* Cambia el cursor al pasar el ratón */                         
+    border-radius   : 10px;                             /* Borde redondeado */
+    box-shadow      : 2px 2px 5px var(--shadow-color);  /* Bisel */
+    background-color: var(--button-color);              /* Color de fondo variable */
 }
+
+/* Estilos para los operadores */
 button.operator {
-    background-color: #f0f0f0;
+    background-color: var(--operator-color);    /* Color de fondo variable */
+    color           : white;
+    font-weight     : bold;                     /* Negrita */
 }
+
+/* Estilos para el botón de igual */
 button.equal {
-    background-color: #ff9800;
-    color: white;
+    background-color: var(--secondary-color);   /* Color de fondo variable */
+    color           : white;
+    font-weight     : bold;                     /* Negrita */
+}
+
+/* Media queries para hacer la calculadora responsive */
+@media screen and (max-width: 800px) {
+    .calculator {
+        padding     : 8px;             /* Ajusta el padding */
+        max-width   : 300px;           /* Ancho máximo para pantallas pequeñas */
+    }
+    button {
+        width       : 45px;            /* Tamaño más pequeño para botones */
+        height      : 45px;
+        margin      : 4px;
+        font-size   : 16px;            /* Tamaño de fuente más pequeño */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .calculator {
+        padding     : 5px;             /* Ajusta el padding */
+        max-width   : 280px;           /* Ancho máximo para pantallas aún más pequeñas */
+    }
+    button {
+        width       : 40px;            /* Tamaño más pequeño para botones */    
+        height      : 40px;
+        margin      : 4px;
+        font-size   : 16px;            /* Tamaño de fuente más pequeño */
+    }
 }

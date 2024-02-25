@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+
+    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" type="text/css" href="staticfiles/css/style.css">
+
 </head>
 <body>
     <div class="calculator">
+        <!-- Pantalla de la calculadora -->
         <div class="screen" id="screen">0</div>
+
+        <!-- Botones para números y operadores -->
         <button onclick="addToScreen('7')">7</button>
         <button onclick="addToScreen('8')">8</button>
         <button onclick="addToScreen('9')">9</button>
         <button onclick="addToScreen('(')">(</button>
-        <button class="operator" onclick="addToScreen('+')">+</button>
+        <button onclick="addToScreen(')')">)</button>
         <br>
         <button onclick="addToScreen('4')">4</button>
         <button onclick="addToScreen('5')">5</button>
         <button onclick="addToScreen('6')">6</button>
-        <button onclick="addToScreen(')')">)</button>
+        <button class="operator" onclick="addToScreen('+')">+</button>
         <button class="operator" onclick="addToScreen('-')">-</button>
         <br>
         <button onclick="addToScreen('1')">1</button>
@@ -28,10 +34,13 @@
         <button class="operator" onclick="addToScreen('*')">*</button>
         <br>
         <button onclick="addToScreen('0')">0</button>
+        <button onclick="addToScreen('.')">.</button>
         <button onclick="clearScreen()">C</button>
-        <button class="equal" onclick="calculate()">=</button>
         <button class="operator" onclick="addToScreen('/')">/</button>
+        <button class="equal" onclick="calculate()">=</button>
     </div>
+
+    <!-- Enlace al archivo JavaScript -->
     <script src="staticfiles/js/operations.js"></script>
 </body>
 </html>
