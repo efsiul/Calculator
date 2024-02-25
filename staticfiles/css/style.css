@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.calculator {
+    width           : 400px;
+    margin          : 0 auto;
+    border          : 1px solid #ccc;
+    padding         : 10px;
+    border-radius   : 5px;
+}
+.screen {
+    width           : calc(100% - 22px); /* Se cambió para compensar el padding */
+    height          : 50px;
+    margin-bottom   : 10px;
+    padding         : 5px;
+    border          : 1px solid #ccc;
+    border-radius   : 3px;
+    overflow        : hidden; /* Para que el texto no se desborde */
+    text-align      : right;
+}
+
+button {
+    width           : 50px;
+    height          : 50px;
+    margin          : 5px;
+    font-size       : 18px;
+    border          : none;
+    cursor          : pointer;
+    border-radius   : 10px;
+}
+button.operator {
+    background-color: #f0f0f0;
+}
+button.equal {
+    background-color: #ff9800;
+    color: white;
+}
